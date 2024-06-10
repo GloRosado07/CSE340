@@ -4,3 +4,152 @@
 *:after {
   box-sizing: border-box;
 }
+
+/*Color Scheme*/
+:root {
+  --fuenteHeading: 'Fjalla One', sans-serif;
+  --fuenteParrafos: 'Open Sans', sans-serif;
+
+  --lightgray: #f7eded;
+  --darkgray: #8d8d8d;
+  --lightblue: #a6cbeb;
+  --skyblue: #4c96d7;
+  --black: #3a3a3a;
+  --white: #fff;
+}
+
+/******page background*****/
+body{
+  background-image: url(../images/site/small_check.jpg);
+}
+
+a {
+  text-decoration: none;
+}
+
+/**body box**/
+#wrapper {
+  margin: 50px 200px;
+  background-color: var(--white);
+  border: .3rem solid var(--skyblue);
+  border-radius: .5rem;
+}
+
+/**Site and account**/
+
+#top-header {
+  display: flex;
+  margin: .5rem;
+}
+
+.siteName {
+  display: block;
+  flex-grow: 1;
+}
+
+.siteName a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+#tools {
+  flex-grow: 1;
+  display: block;
+}
+
+#tools a {
+  display: flex;
+  justify-content: flex-end;
+  font-family:var(--fuenteParrafos);
+  color: black;
+}
+
+/**navigation**/
+nav {
+  background-color: var(--black);
+  padding: .5rem;
+  margin-top: 1.5rem; 
+}
+
+nav, ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;  
+}
+
+nav, ul, li {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--fuenteParrafos);
+  flex-grow: 1;
+}
+
+/**title**/
+h1 {
+  font-family: var(--fuenteHeading);
+  text-align: left;
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+/**Vehicle logo**/
+.logo {
+  background-image: url(/public/images/vehicles/delorean.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/*DCM Delorean*/
+main {
+  margin: 1rem;
+}
+
+h1, h2 {
+  font-family: var(--fuenteHeading);
+  font-size: 1.5rem;
+}
+
+#motors-wrap img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+#motors-wrap {
+  position: relative;
+}
+
+#motors-content {
+  color: var(--skyblue);
+  box-shadow: 3px 5px 3px var(--lightgray);
+  padding: 30px 30px;
+  max-width: 45%;
+  position:absolute;
+  top:75px;
+  left:20px;
+}
+
+#motors-content h2{
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+#motors-content p {
+  margin: 3px;
+}
+
+#own-button {
+  padding: .5rem;
+  background-color: var(--skyblue);
+  display: flex;
+  width: 80%;
+  font-weight: bold;
+  box-shadow: var(--darkgray);
+  border-radius: 3px;
+  justify-content: center;
+}
