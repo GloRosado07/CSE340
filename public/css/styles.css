@@ -162,7 +162,7 @@ h1, h2 {
   display: flex;
   width: 80%;
   font-weight: bold;
-  box-shadow: var(--darkgray);
+  box-shadow: 2px 2px 2px 1px var(--darkgray);
   border-radius: 3px;
   justify-content: center;
   margin: auto;
