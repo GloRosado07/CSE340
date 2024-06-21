@@ -1,33 +1,33 @@
-SELECT column_name, data_type
+SELECT column_case, data_type
 FROM information_schema.columns
 WHERE table_name = 'account';
 
--- Insert a new record into the account table with correct column names
+-- Insert a table with columns information
 INSERT INTO account (account_firstname, account_lastname, account_email, account_password)
 VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n');
 
---verify trable structure
+--verify trable 
 SELECT account_id
 FROM account
 WHERE account_email = 'tony@starkent.com';
 
 
--- Update the account_type for Tony Stark
+-- Update the account type for Tony Stark
 UPDATE account
 SET account_type = 'Admin'
 WHERE account_id = 1;  -- Replace 1 with the actual account_id
 
--- Delete the Tony Stark record
+-- Delete the Tony Stark account
 DELETE FROM account
 WHERE account_id = 1;  -- Replace 1 with the actual account_id
 
--- Find the account_id for Tony Stark
+-- Find the account id Tony Stark
 SELECT account_id
 FROM account
 WHERE account_email = 'tony@starkent.com';
 
 
--- #1  Add classification_id column to inventory table
+-- #1  Add classification id column to inventory table
 ALTER TABLE public.inventory
 ADD COLUMN classification_id INT;
 
