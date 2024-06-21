@@ -26,37 +26,6 @@ SELECT account_id
 FROM account
 WHERE account_email = 'tony@starkent.com';
 
--- Update the account_type for Tony Stark
-UPDATE account
-SET account_type = 'Admin'
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
--- Delete the Tony Stark record
-DELETE FROM account
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
--- assignment2.sql
-
--- Update the account_type for Tony Stark
-UPDATE account
-SET account_type = 'Admin'
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
--- Delete the Tony Stark record
-DELETE FROM account
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
--- assignment2.sql
-
--- Update the account_type for Tony Stark
-UPDATE account
-SET account_type = 'Admin'
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
--- Delete the Tony Stark record
-DELETE FROM account
-WHERE account_id = 1;  -- Replace 1 with the actual account_id
-
 
 -- #1  Add classification_id column to inventory table
 ALTER TABLE public.inventory
