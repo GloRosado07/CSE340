@@ -59,7 +59,18 @@ UPDATE public.inventory
 SET inv_description = REPLACE(inv_description, 'small interiors', 'a huge interior')
 WHERE inv_make = 'GM' AND inv_model = 'Hummer';
 
+-- Query 5 Use an inner join to select the make and model fields from the inventory table and 
+-- the classification name field from the classification table for inventory items that belong to the "Sport" category.
+SELECT inv_make, inv_model, classification_name
+FROM public.inventory a
+INNER JOIN public.classification b
+	ON a.classification_id = b.classification_id
+WHERE classification_name = 'Sport';
+
 --#6 Update file paths in inv_thumbnail
 UPDATE public.inventory
-SET inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/a-car-name.jpg');
+UPDATE public.inventory
+SET inv_image = REPLACE(inv_image, 's/', 's/vehicles/'),
+    inv_thumbnail= REPLACE(inv_thumbnail, 's/', 's/vehicles/');
+
 

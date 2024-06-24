@@ -56,7 +56,7 @@ a {
 .siteName a {
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: var(--black);
 }
 
 #tools {
@@ -67,7 +67,7 @@ a {
 
 #tools a {
   font-family: var(--fuenteParrafos);
-  color: black;
+  color: var(--black);
 }
 
 /**navigation**/
@@ -383,4 +383,144 @@ figure figcaption {
     width: 80%;
   }
 }
+
+/******** 
+Classification View Grid
+*******/
+#inv-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+#inv-display li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+}
+
+#inv-display img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.namePrice {
+  text-align: center;
+}
+
+.namePrice h2 {
+  margin: 0;
+}
+
+.namePrice span {
+  font-weight: bold;
+}
+
+/******** 
+Details Page 
+*******/
+.car-img {
+  max-width: 100%; /* Full width for small screens */
+}
+
+.details-box {
+  width: 100%; /* Full width for small screens */
+}
+
+.price span, .miles span, .color span, .details-view h1 {
+  font-weight: bold;
+  color:  rgb(24, 138, 184);
+}
+
+
+/******** 
+Form CSS
+*******/
+.form-display {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgb(24, 138, 184);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form-display form {
+  margin-bottom: 20px;
+}
+
+.form-display label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-display input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-display input[type="submit"],
+.form-display button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--skyblue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.form-display input[type="submit"]:hover,
+.form-display button:hover {
+    background-color: var(--skyblue);
+}
+
+.form-display span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+.no-registered {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.no-registered a {
+  color: rgb(24, 138, 184);
+  text-decoration: none;
+}
+
+.no-registered a:hover {
+  text-decoration: underline;
+}
+
+.form-display input:invalid {
+  border: 1px solid #ff6347;
+}
+
+.form-display input:valid {
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px; 
+  background-color: #f9f9f9; 
+}
+
 
