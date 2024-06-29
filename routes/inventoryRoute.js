@@ -17,20 +17,7 @@ router.get(
     middleware.handleErrors(invController.buildError)
 );
 
-// Route to management view
-router.get("/", middleware.handleErrors(invController.buildManagement));
-
-//Route to add classification view
-router.get("/add-classification", middleware.handleErrors(invController.buildAddClassification));
-
-// Process the new classification data
-router.post(
-    "/add-classification",
-    middleware.handleErrors(invController.addClassification)
-)
 
 router.get("/add-inventory", middleware.handleErrors(invController.buildAddInventoryView))
-router.post("/add-inventory", middleware.handleErrors(invController.addInventory))
-
 
 module.exports = router;

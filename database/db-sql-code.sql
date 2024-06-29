@@ -52,6 +52,8 @@ VALUES ('Custom'),
 	('Truck'),
 	('Sedan');
 
+  -- Data for table `inventory`
+
 INSERT INTO public.inventory (
     inv_make,
     inv_model,
@@ -248,7 +250,6 @@ INNER JOIN public.classification b
 WHERE classification_name = 'Sport';
 
 --#6 Update file paths in inv_thumbnail
-UPDATE public.inventory
 UPDATE public.inventory
 SET inv_image = REPLACE(inv_image, 's/', 's/vehicles/'),
     inv_thumbnail= REPLACE(inv_thumbnail, 's/', 's/vehicles/');
