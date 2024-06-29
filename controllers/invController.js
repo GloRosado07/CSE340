@@ -49,33 +49,6 @@ invCont.buildError = (req, res, next) => {
   }
 };
 
-/* ***************************
- *  Management View
- * ************************** */
-invCont.buildManagement = async function (req, res, next) {
-  let nav = await utilities.getNav();
-  res.render("./inventory/management", {
-    title: "Vehicle Inventory Management",
-    errors:null,
-    nav,
-  });
-};
-
-
-
-/* ***************************
- *  Build Add Inventory View
- * ************************** */
-invCont.buildAddInventoryView = async function (req, res, next) {
-  let nav = await utilities.getNav();
-  let classificationList = await utilities.classificationList();
-  res.render("./inventory/add-inventory", {
-    title: "Add Vehicle",
-    nav,
-    errors: null,
-    classificationList,
-  });
-};
 
 
 module.exports = invCont

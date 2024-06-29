@@ -4,7 +4,6 @@ const router = new express.Router()
 const invController = require("../controllers/invController")
 const middleware = require("../utilities/index");
 
-
 // Route to build inventory by classification view
 router.get("/type/:classificationId", middleware.handleErrors(invController.buildByClassificationId));
 
@@ -17,7 +16,5 @@ router.get(
     middleware.handleErrors(invController.buildError)
 );
 
-
-router.get("/add-inventory", middleware.handleErrors(invController.buildAddInventoryView))
 
 module.exports = router;
